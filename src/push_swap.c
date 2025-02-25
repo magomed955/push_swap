@@ -26,7 +26,7 @@ static int	initialize_pile(t_pile **pile_a, t_pile **pile_b, char **spl)
 		i++;
 	while (--i >= 0)
 	{
-		t = add_to_list(pile_a, ft_atoi(spl[i]));
+		t = add_to_stack(pile_a, ft_atoi(spl[i]));
 		if (t == -1)
 			return (-1);
 		free(spl[i]);

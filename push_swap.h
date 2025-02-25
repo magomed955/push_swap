@@ -41,8 +41,8 @@ void		get_median_quartil(char **spl, t_mq **mq, int *error);
 void		fill_mq(t_mq **mq, int len, int array[]);
 void		free_everything(t_pile **pile_a, t_pile **pile_b, t_mq **mq);
 
-int			new_element(int nbr, t_pile **elem);
-int			add_to_list(t_pile **pile, int nbr);
+int			new_elem(int nb, t_pile **elem);
+int			add_to_stack(t_pile **pile, int nbr);
 void		free_pile(t_pile **pile);
 int			len(t_pile *pile);
 

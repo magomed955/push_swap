@@ -16,7 +16,7 @@ void	push_a(t_pile **pile_a, t_pile **pile_b, t_mq **mq)
 {
 	t_pile	*tmp;
 
-	if (add_to_list(pile_a, (*pile_b)->value) == -1)
+	if (add_to_stack(pile_a, (*pile_b)->value) == -1)
 	{
 		free_everything(pile_a, pile_b, mq);
 		exit(1);
@@ -33,7 +33,7 @@ void	push_b(t_pile **pile_a, t_pile **pile_b, t_mq **mq)
 {
 	t_pile	*tmp;
 
-	if (add_to_list(pile_b, (*pile_a)->value) == -1)
+	if (add_to_stack(pile_b, (*pile_a)->value) == -1)
 	{
 		free_everything(pile_a, pile_b, mq);
 		exit(1);

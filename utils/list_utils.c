@@ -12,12 +12,12 @@
 
 #include "../push_swap.h"
 
-int	new_element(int nbr, t_pile **elem)
+int	new_elem(int nb, t_pile **elem)
 {
 	(*elem) = malloc(sizeof(t_pile));
 	if (!(*elem))
 		return (-1);
-	(*elem)->value = nbr;
+	(*elem)->value = nb;
 	(*elem)->next = NULL;
 	(*elem)->prev = NULL;
 	return (1);
@@ -30,11 +30,11 @@ void	free_everything(t_pile **pile_a, t_pile **pile_b, t_mq **mq)
 	free(*mq);
 }
 
-int	add_to_list(t_pile **pile, int nbr)
+int	add_to_stack(t_pile **pile, int nbr)
 {
 	t_pile	*elem;
 
-	if (new_element(nbr, &elem) == -1)
+	if (new_elem(nbr, &elem) == -1)
 		return (-1);
 	if ((*pile) == NULL)
 	{

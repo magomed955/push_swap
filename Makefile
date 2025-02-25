@@ -12,7 +12,8 @@
 
 NAME = push_swap
 
-SRCS = 	src/push_swap.c\
+SRCS = \
+		src/push_swap.c\
 		src/ft_strdup.c\
 		src/ft_atoi.c\
 		src/ft_strlen.c\
@@ -40,12 +41,23 @@ CFLAGS = -Wall -Werror -Wextra -g3
 all: ${NAME}
 
 $(NAME): ${OBJS}
+	@echo "\033[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	@echo "\033[1;32m🚀 [✔] Compilation in progress... 🚀\033[0m"
+	@echo "\033[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 	${CC} ${CFLAGS} -I ${INCLUDES} ${OBJS} -o $(NAME)
+	@echo "\033[1;34m🎉 [✔] Compilation completed successfully! 🎉\033[0m"
+	@echo "\033[1;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
 clean:
+	@echo "\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	@echo "\033[1;33m🗑️ [✗] Removing object files...\033[0m"
+	@echo "\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 	rm -rf ${OBJS}
 
 fclean: clean
+	@echo "\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	@echo "\033[1;31m🔥 [✗] Removing executable...\033[0m"
+	@echo "\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 	rm -rf ${NAME}
 
 re: fclean all
